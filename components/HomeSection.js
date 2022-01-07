@@ -54,7 +54,11 @@ function HomeSection({ data }) {
             transition-all ease-in-out delay-[0] duration-[0.3s] text-center cursor-pointer
           rounded-[5px] bg-[#181715] shadow-md shadow-black hover:-mt-[3px]"
           >
-            <a target="_blank" href="https://github.com/developerslearnit">
+            <a
+              target="_blank"
+              className="text-gray-400"
+              href="https://github.com/developerslearnit"
+            >
               <svg
                 className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium h-[24px] w-[24px] text-gray-400 css-i4bv87-MuiSvgIcon-root"
                 focusable="false"
