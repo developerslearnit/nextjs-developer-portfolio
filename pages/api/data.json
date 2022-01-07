@@ -1,0 +1,110 @@
+{
+  "intro": {
+    "title": "Full Stack Developer",
+    "subtitle": "Introduction",
+    "content": "I'm Mark Adesina, a blogger on DevelopersLearnIt.Com. I Spend most of time coding outstanding projects or writting tutorials."
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Biography",
+    "content": "I'm a Full stack Developer with over 13 years of experience. I'm from Lagos, Nigeria. I currently work as a full stack developer in Simplex Business Solutions. I like working with people around the world. I like work with new people. New people are new experiences"
+  },
+  "skills": {
+    "title": "My Skill Sets",
+    "subtitle": "Experience",
+    "items": [
+      {
+        "title": "ReactJs",
+        "skillLevel": "90%",
+        "cssClass": "w-[90%]"
+      },
+      {
+        "title": "NextJs",
+        "skillLevel": "85%",
+        "cssClass": "w-[85%]"
+      },
+      {
+        "title": "ASP.NET Core",
+        "skillLevel": "95%",
+        "cssClass": "w-[95%]"
+      },
+      {
+        "title": "React Native",
+        "skillLevel": "90%",
+        "cssClass": "w-[90%]"
+      },
+      {
+        "title": "Angular",
+        "skillLevel": "80%",
+        "cssClass": "w-[80%]"
+      },
+      {
+        "title": "NodeJs",
+        "skillLevel": "85%",
+        "cssClass": "w-[85%]"
+      }
+    ],
+    "workHistory": [
+      {
+        "companyName": "Simplex Business Solutions",
+        "jobTitle": "Head Of Information Technology Department",
+        "jobDescription": "",
+        "startDate": "2017",
+        "endDate": "Today"
+      },
+      {
+        "companyName": "Fintrack Software Co. Ltd",
+        "jobTitle": "Snr. Software Developer",
+        "jobDescription": "",
+        "startDate": "2015",
+        "endDate": "2017"
+      },
+      {
+        "companyName": "BISM Consulting Ltd",
+        "jobTitle": "Front End Developer",
+        "jobDescription": "",
+        "startDate": "2012",
+        "endDate": "2015"
+      },
+      {
+        "companyName": "BISM Consulting Ltd",
+        "jobTitle": "Software Developer",
+        "jobDescription": "",
+        "startDate": "2010",
+        "endDate": "2012"
+      }
+    ]
+  },
+  "contact": {
+    "address": "28, Gbolade Adebanjo Str, Lagos, Nigeria",
+    "telephone": "+234 708 505 1295",
+    "email": "mark2kk@gmail.com"
+  },
+  "portfolios": [
+    {
+      "title": "NextJs",
+      "description": "Amzon Clone with Nextjs + Tailwindcss + React + Firebase + Stripe",
+      "image": "portsimg/amazon-clone.png",
+      "url": "https://react-amazon-clone-mark.vercel.app"
+    },
+    {
+      "title": "NextJs",
+      "description": "Twitter Clone with Nextjs + Tailwindcss + React + Firebase 9",
+      "image": "portsimg/twitter-clone.png",
+      "url": "https://next-js-twitter-clone-mark.vercel.app/"
+    },
+    {
+      "title": "ReactJs",
+      "description": "Tesla Clone with Styled Component",
+      "image": "portsimg/tesla-clone.png",
+      "url": "https://epic-turing-ab5023.netlify.app/"
+    },
+
+    {
+      "title": "NextJs",
+      "description": "Web 3 Metaverse Challenge with Moralis",
+      "image": "portsimg/metaverse-challenge.png",
+      "url": "https://metaverse-challenge-beta.vercel.app/"
+    }
+  ]
+}
