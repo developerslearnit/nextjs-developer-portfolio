@@ -84,26 +84,26 @@
     {
       "title": "NextJs",
       "description": "Amzon Clone with Nextjs + Tailwindcss + React + Firebase + Stripe",
-      "image": "portsimg/amazon-clone.png",
+      "image": "/amazon-clone.png",
       "url": "https://react-amazon-clone-mark.vercel.app"
     },
     {
       "title": "NextJs",
       "description": "Twitter Clone with Nextjs + Tailwindcss + React + Firebase 9",
-      "image": "portsimg/twitter-clone.png",
+      "image": "/twitter-clone.png",
       "url": "https://next-js-twitter-clone-mark.vercel.app/"
     },
     {
       "title": "ReactJs",
       "description": "Tesla Clone with Styled Component",
-      "image": "portsimg/tesla-clone.png",
+      "image": "/tesla-clone.png",
       "url": "https://epic-turing-ab5023.netlify.app/"
     },
 
     {
       "title": "NextJs",
       "description": "Web 3 Metaverse Challenge with Moralis",
-      "image": "portsimg/metaverse-challenge.png",
+      "image": "/metaverse-challenge.png",
       "url": "https://metaverse-challenge-beta.vercel.app/"
     }
   ]
