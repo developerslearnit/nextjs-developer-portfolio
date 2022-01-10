@@ -35,7 +35,13 @@ function AppMenu() {
             w-full rounded-0 py-[20px] text-[#ddd] text-[25px] pl-[20px]
             flex items-center justify-start h-[35px] mb-[20px]"
             >
-              <Link to="intro" spy={true} smooth={true}>
+              <Link
+                onClick={() => setIsMenuOpen(false)}
+                to="intro"
+                spy={true}
+                smooth={true}
+                className="w-full leading-[35px]"
+              >
                 Intro
               </Link>
             </div>
@@ -44,7 +50,13 @@ function AppMenu() {
             w-full rounded-0 py-[20px] text-[#ddd] text-[25px] pl-[20px]
             flex items-center justify-start h-[35px] mb-[20px]"
             >
-              <Link to="about" spy={true} smooth={true}>
+              <Link
+                onClick={() => setIsMenuOpen(false)}
+                to="about"
+                spy={true}
+                smooth={true}
+                className="w-full leading-[35px]"
+              >
                 About
               </Link>
             </div>
@@ -54,7 +66,13 @@ function AppMenu() {
             w-full rounded-0 py-[20px] text-[#ddd] text-[25px] pl-[20px]
             flex items-center justify-start h-[35px] mb-[20px]"
             >
-              <Link to="skills" spy={true} smooth={true}>
+              <Link
+                onClick={() => setIsMenuOpen(false)}
+                to="skills"
+                spy={true}
+                smooth={true}
+                className="w-full leading-[35px]"
+              >
                 Skills
               </Link>
             </div>
@@ -64,7 +82,13 @@ function AppMenu() {
             w-full rounded-0 py-[20px] text-[#ddd] text-[25px] pl-[20px]
             flex items-center justify-start h-[35px] mb-[20px]"
             >
-              <Link to="portfolios" spy={true} smooth={true}>
+              <Link
+                onClick={() => setIsMenuOpen(false)}
+                to="portfolios"
+                spy={true}
+                smooth={true}
+                className="w-full leading-[35px]"
+              >
                 Portfolios
               </Link>
             </div>
@@ -74,7 +98,13 @@ function AppMenu() {
             w-full rounded-0 py-[20px] text-[#ddd] text-[25px] pl-[20px]
             flex items-center justify-start h-[35px]"
             >
-              <Link to="contact" spy={true} smooth={true}>
+              <Link
+                onClick={() => setIsMenuOpen(false)}
+                to="contact"
+                spy={true}
+                smooth={true}
+                className="w-full leading-[35px]"
+              >
                 Contact
               </Link>
             </div>

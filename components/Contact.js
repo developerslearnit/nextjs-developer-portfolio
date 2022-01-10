@@ -9,7 +9,19 @@ function Contact({ data }) {
   const [mailSent, setMailSent] = useState(false);
   const [loading, setLoading] = useState(false);
 
+  const emailValidation = (email) => {
+    const regex =
+      /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    if (!email.trim() || regex.test(email) === false) {
+      return false;
+    }
+    return true;
+  };
+
   const sendEmail = async () => {
+    if (!emailValidation(email)) {
+      return false;
+    }
     setLoading(true);
     axios
       .post(`/api/sendmail`, {
@@ -46,6 +58,7 @@ function Contact({ data }) {
         <input
           onChange={(e) => setName(e.target.value)}
           type="text"
+          autoComplete="off"
           className="block rounded-[1px] bg-transparent focus:outline-none focus:border-[#987750] focus:placeholder-transparent
           text-[#ccc] text-[16px] p-[20px] h-[70px] mr-[20px] w-1/2 border 
           border-[rgba(255,255,255,0.2)] hover:border-gray-600 transition-all ease-in-out delay-[0] 
@@ -56,6 +69,8 @@ function Contact({ data }) {
         <input
           onChange={(e) => setEmail(e.target.value)}
           type="email"
+          type="text"
+          autoComplete="off"
           className="block rounded-[1px] bg-transparent focus:outline-none focus:border-[#987750] focus:placeholder-transparent
           text-[#ccc] text-[16px] p-[20px] h-[70px] mr-[0px] w-1/2 border 
           border-[rgba(255,255,255,0.2)] hover:border-gray-600 transition-all ease-in-out delay-[0] 
@@ -73,6 +88,8 @@ function Contact({ data }) {
           border-[rgba(255,255,255,0.2)] hover:border-gray-600 transition-all ease-in-out delay-[0] 
           duration-[0.3s]"
           placeholder="Phone"
+          type="text"
+          autoComplete="off"
         />
       </div>
       <div className="mb-[20px] w-full">
@@ -84,6 +101,8 @@ function Contact({ data }) {
           border-[rgba(255,255,255,0.2)] hover:border-gray-600 transition-all ease-in-out delay-[0] 
           duration-[0.3s] min-h-[180px]"
           placeholder="Message"
+          type="text"
+          autoComplete="off"
         />
       </div>
       <button

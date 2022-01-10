@@ -22,7 +22,6 @@ export default function Home({ portfolioData }) {
     <>
       <Head>
         <title>Mark Adesina Resume</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <main
         className={`w-[56%] h-screen 2xl:pl-[5%] lg:pl-10 md:pl-[5%] md:ml-[3%] pr-[10%] transition-all ease-in-out delay-[2ms] duration-[50] ${
