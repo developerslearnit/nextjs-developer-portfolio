@@ -1,4 +1,38 @@
+import axios from "axios";
+import { useState } from "react";
+
 function Contact({ data }) {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [phone, setPhone] = useState("");
+  const [mailSent, setMailSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const sendEmail = async () => {
+    setLoading(true);
+    axios
+      .post(`/api/sendmail`, {
+        to: "mark2kk@gmail.com",
+        from: email,
+        subject: "Portfolio Contact Page",
+        text: message,
+        phone: phone,
+        name: name,
+      })
+      .then((response) => {
+        setLoading(false);
+        setEmail("");
+        setName("");
+        setMessage("");
+        setPhone("");
+        setMailSent(true);
+      })
+      .catch((error) => {
+        setLoading(false);
+      });
+  };
+
   return (
     <div id="contact" className="pt-[150px] pb-[100px] w-full">
       <h3 className="subtitle">Contact</h3>
@@ -10,6 +44,7 @@ function Contact({ data }) {
 
       <div className="mt-[58px] mb-[20px] flex justify-between w-full">
         <input
+          onChange={(e) => setName(e.target.value)}
           type="text"
           className="block rounded-[1px] bg-transparent focus:outline-none focus:border-[#987750] focus:placeholder-transparent
           text-[#ccc] text-[16px] p-[20px] h-[70px] mr-[20px] w-1/2 border 
@@ -19,6 +54,7 @@ function Contact({ data }) {
         />
 
         <input
+          onChange={(e) => setEmail(e.target.value)}
           type="email"
           className="block rounded-[1px] bg-transparent focus:outline-none focus:border-[#987750] focus:placeholder-transparent
           text-[#ccc] text-[16px] p-[20px] h-[70px] mr-[0px] w-1/2 border 
@@ -30,6 +66,7 @@ function Contact({ data }) {
 
       <div className="mb-[20px]  w-full">
         <input
+          onChange={(e) => setPhone(e.target.value)}
           type="text"
           className="block rounded-[1px] bg-transparent focus:outline-none focus:border-[#987750] focus:placeholder-transparent
           text-[#ccc] text-[16px] p-[20px] h-[70px] mr-[0px] w-full border 
@@ -40,6 +77,7 @@ function Contact({ data }) {
       </div>
       <div className="mb-[20px] w-full">
         <textarea
+          onChange={(e) => setMessage(e.target.value)}
           type="text"
           className="block rounded-[1px] bg-transparent focus:outline-none focus:border-[#987750] focus:placeholder-transparent
           text-[#ccc] text-[16px] p-[20px] h-[70px] mr-[0px] w-full border 
@@ -49,12 +87,43 @@ function Contact({ data }) {
         />
       </div>
       <button
-        className="flex justify-center py-[25px] w-full rounded-[1px] bg-transparent focus:outline-none 
+        disabled={loading || !name.trim() || !email.trim() || !message.trim()}
+        onClick={sendEmail}
+        className={`flex justify-center py-[25px] w-full rounded-[1px] bg-transparent focus:outline-none 
         hover:border-[#987750] border-[rgba(255,255,255,0.2)] transition-all ease-in-out delay-[0] 
-        duration-[0.3s] border"
+        duration-[0.3s] border cursor-pointer ${
+          (loading || !name.trim() || !email.trim() || !message.trim()) &&
+          "hover:border-[rgba(255,255,255,0.2)] cursor-default"
+        }`}
       >
-        SEND MESSAGE
+        {loading && (
+          <svg
+            className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <circle
+              className="opacity-25"
+              cx="12"
+              cy="12"
+              r="10"
+              stroke="currentColor"
+            ></circle>
+            <path
+              className="opacity-75"
+              fill="currentColor"
+              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+            ></path>
+          </svg>
+        )}
+        <span className={`${loading && "text-gray-700"}`}>SEND MESSAGE</span>
       </button>
+      {mailSent && (
+        <div className="text-green-900 w-full h-[50px] mt-[20px] text-[20px] text-center">
+          <h3>Your message has been received, we will contact you soon.</h3>
+        </div>
+      )}
 
       <div className="pt-[95px] w-full flex flex-col">
         <p className="text-[14px] uppercase m-0 p-0 mb-[10px]">Address</p>
