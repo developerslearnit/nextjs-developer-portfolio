@@ -7,7 +7,7 @@ function AppMenu() {
 
   return (
     <>
-      <div className="flex w-full items-end justify-end pr-[50px] pt-[40px]">
+      <div className="fixed top-[10px] right-[10px] sm:block sm:w-[3%] flex w-full sm:items-end justify-end pr-[50px] pt-[40px]  ">
         <MenuIcon
           onClick={() => setIsMenuOpen(true)}
           className="h-[30px] w-[30px] text-[#ddd] cursor-pointer"

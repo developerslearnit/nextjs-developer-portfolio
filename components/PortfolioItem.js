@@ -1,12 +1,12 @@
 function PortfolioItem({ image, title, description, url }) {
   return (
     <div
-      className="flex flex-col p-[30px] xl:w-[470px] lg:w-[470px] md:w-[430px]  max-h-[434px] cursor-pointer
+      className="flex flex-col p-[30px] w-[100%]   max-h-[434px] cursor-pointer
   rounded-[5px] justify-start items-start transition-all duration-[0.5s] 
   bg-[#222] shadow-md shadow-[#262a2e] hover:rounded-[5px] hover:shadow-lg ease-out hover:bg-[#111]"
     >
       <a href={url} target="_blank">
-        <div className="xl:w-[410px] lg:w-[410px] md:w-[370px] sm:w-[250px] lg:h-[250px] sm:h-[200px] sm:mb-7">
+        <div className="w-[98%] mx-auto">
           <img src={image} alt="" className="h-full w-full" />
         </div>
         <h2 className="text-[#987750] mt-[18px]">{title}</h2>
@@ -19,3 +19,6 @@ function PortfolioItem({ image, title, description, url }) {
 }
 
 export default PortfolioItem;
+// xl:w-[470px] lg:w-[470px] md:w-[430px]
+
+// xl:w-[410px] lg:w-[410px] md:w-[370px] sm:w-[250px] lg:h-[250px] sm:h-[200px] sm:mb-7

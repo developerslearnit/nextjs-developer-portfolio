@@ -1,7 +1,7 @@
 function PictureFrame() {
   return (
     <div className="py-[60px] px-[16%]">
-      <div className="py-[38px] px-[41px] relative mb-[30px] w-full sm:hidden lg:block">
+      <div className="py-[38px] px-[41px] relative mb-[30px] w-full">
         <div
           className="border-[rgba(255,255,255,0.2)] border rounded-[2px] absolute 
         left-0 right-0 bottom-[20px] top-[20px] z-1 transition-all ease-in-out delay-150 duration-100"

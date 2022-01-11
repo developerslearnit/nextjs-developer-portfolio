@@ -23,9 +23,21 @@ export default function Home({ portfolioData }) {
       <Head>
         <title>Mark Adesina Resume</title>
       </Head>
+
+      <div
+        className={`w-full md:w-[44%] md:border-l md:border-[rgba(255,255,255,0.2)] md:h-screen md:fixed md:right-0 
+        md:top-0 md:bottom-0 transition-all ease-in-out delay-[2ms] duration-[50] ${
+          scroll && "md:w-[32%]"
+        }`}
+      >
+        <AppMenu />
+
+        <PictureFrame />
+      </div>
+
       <main
-        className={`w-[56%] h-screen 2xl:pl-[5%] lg:pl-10 md:pl-[5%] md:ml-[3%] pr-[10%] transition-all ease-in-out delay-[2ms] duration-[50] ${
-          scroll && "w-[68%]  pr-[5%]"
+        className={`w-[90%] mx-auto md:w-[56%] md:ml-1  h-screen md:pl-[5%]  md:pr-[10%] transition-all ease-in-out delay-[2ms] duration-[50] ${
+          scroll && "md:w-[68%] lg:w-[68%] xl:w-[68%] 2xl:w-[68%]"
         }`}
       >
         <HomeSection data={portfolioData.intro} />
@@ -35,16 +47,6 @@ export default function Home({ portfolioData }) {
         <Contact data={portfolioData.contact} />
         <Footer />
       </main>
-      <div
-        className={` w-[44%] border-l border-[rgba(255,255,255,0.2)] h-screen fixed right-0 
-        top-0 bottom-0 transition-all ease-in-out delay-[2ms] duration-[50] ${
-          scroll && "w-[32%]"
-        }`}
-      >
-        <AppMenu />
-
-        <PictureFrame />
-      </div>
     </>
   );
 }

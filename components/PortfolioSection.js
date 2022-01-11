@@ -11,7 +11,7 @@ function PortfolioSection({ data }) {
       <h3 className="subtitle">Portfolio</h3>
       <h3 className="title">Featured Projects</h3>
 
-      <div className="mx-auto w-full grid xl:grid-cols-2 xl:gap-8 lg:grid-cols-1 lg:gap-8 md:gap-8 sm:grid-cols-1 sm:gap-7">
+      <div className="mx-auto w-full grid grid-col-1 lg:grid-cols-2 lg:gap-3">
         {data.map((item, index) => (
           <PortfolioItem
             key={index}

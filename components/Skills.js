@@ -10,109 +10,12 @@ function Skills({ data }) {
         <div className="relative mb-4" key={index}>
           <h3 className="mb-[0.5px] text-[18px] font-medium text-[#888] leading-[40px] relative">
             {skill.title}
-            <span
-              className={`absolute bottom-[4px] right-[0] text-[#987750] py-[2px] px-[3px] bg-[#987750] 
-          bg-opacity-10 text-[14px] m-0 leading-[25px] rounded-md`}
-            >
-              {skill.skillLevel}
-            </span>
           </h3>
           <div className="w-full bg-gray-600 rounded-full h-[1px]">
-            <div
-              className={`bg-[#987750] h-[1px] rounded-full ${skill.cssClass}`}
-            ></div>
+            <div className={`bg-[#987750] h-[1px] rounded-full w-full`}></div>
           </div>
         </div>
       ))}
-
-      {/* <div className="relative mb-4">
-        <h3 className="mb-[0.5px] text-[18px] font-medium text-[#888] leading-[40px] relative">
-          ReactJs
-          <span
-            className="absolute bottom-[4px] right-[10%] text-[#987750] py-[2px] px-[3px] bg-[#987750] 
-          bg-opacity-10 text-[14px] m-0 leading-[25px] rounded-md"
-          >
-            90%
-          </span>
-        </h3>
-        <div className="w-full bg-gray-600 rounded-full h-[1px]">
-          <div className="bg-[#987750] h-[1px] rounded-full  w-[90%]"></div>
-        </div>
-      </div>
-
-      <div className="relative mb-4">
-        <h3 className="mb-[0.5px] text-[18px] font-medium text-[#888] leading-[40px] relative">
-          NextJs
-          <span
-            className="absolute bottom-[4px] right-[12%] text-[#987750] py-[2px] px-[3px] bg-[#987750] 
-          bg-opacity-10 text-[14px] m-0 leading-[25px] rounded-md"
-          >
-            90%
-          </span>
-        </h3>
-        <div className="w-full bg-gray-600 rounded-full h-[1px]">
-          <div className="bg-[#987750] h-[1px] rounded-full  w-[88%]"></div>
-        </div>
-      </div>
-
-      <div className="relative mb-4">
-        <h3 className="mb-[0.5px] text-[18px] font-medium text-[#888] leading-[40px] relative">
-          ASP.Net Core
-          <span
-            className="absolute bottom-[4px] right-[5%] text-[#987750] py-[2px] px-[3px] bg-[#987750] 
-          bg-opacity-10 text-[14px] m-0 leading-[25px] rounded-md"
-          >
-            95%
-          </span>
-        </h3>
-        <div className="w-full bg-gray-600 rounded-full h-[1px]">
-          <div className="bg-[#987750] h-[1px] rounded-full  w-[95%]"></div>
-        </div>
-      </div>
-
-      <div className="relative mb-4">
-        <h3 className="mb-[0.5px] text-[18px] font-medium text-[#888] leading-[40px] relative">
-          NodeJs
-          <span
-            className="absolute bottom-[4px] right-[5%] text-[#987750] py-[2px] px-[3px] bg-[#987750] 
-          bg-opacity-10 text-[14px] m-0 leading-[25px] rounded-md"
-          >
-            90%
-          </span>
-        </h3>
-        <div className="w-full bg-gray-600 rounded-full h-[1px]">
-          <div className="bg-[#987750] h-[1px] rounded-full  w-[90%]"></div>
-        </div>
-      </div>
-
-      <div className="relative mb-4">
-        <h3 className="mb-[0.5px] text-[18px] font-medium text-[#888] leading-[40px] relative">
-          React Native
-          <span
-            className="absolute bottom-[4px] right-[5%] text-[#987750] py-[2px] px-[3px] bg-[#987750] 
-          bg-opacity-10 text-[14px] m-0 leading-[25px] rounded-md"
-          >
-            90%
-          </span>
-        </h3>
-        <div className="w-full bg-gray-600 rounded-full h-[1px]">
-          <div className="bg-[#987750] h-[1px] rounded-full  w-[90%]"></div>
-        </div>
-      </div>
-      <div className="relative mb-4">
-        <h3 className="mb-[0.5px] text-[18px] font-medium text-[#888] leading-[40px] relative">
-          Angular
-          <span
-            className="absolute bottom-[4px] right-[20%] text-[#987750] py-[2px] px-[3px] bg-[#987750] 
-          bg-opacity-10 text-[14px] m-0 leading-[25px] rounded-md"
-          >
-            80%
-          </span>
-        </h3>
-        <div className="w-full bg-gray-600 rounded-full h-[1px]">
-          <div className="bg-[#987750] h-[1px] rounded-full  w-[80%]"></div>
-        </div>
-      </div> */}
 
       <div className="h-3 mt-[60px] w-full"></div>
 
